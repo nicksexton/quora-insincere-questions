@@ -8,7 +8,7 @@ attention-sandwich-model/attention-sandwich-model.ipynb --- A number of the [pub
 
 I wanted to dig around in the guts of how to implement an attention mechanism for NLP classification. In this notebook, I  implement an attention algorithm that sits between two LSTMs (or more, if we decide to continue stacking, why not) to create an attention sandwich, and serves to make the hidden states of the first LSTM for each timestep accessible to each timestep of the second LSTM, based on attention weights (which are also learned). This has the advantage that for each point in its sequence, the second LSTM (which we'll call, for no particular reason, LSTM_q) is able to look at a much wider input (context) than just it's own hidden state and the current output of the previous LSTM (which we'll call LSTM_p), and means that the two LSTMs aren't necessarily aligned (i.e., they don't need to have the same number of timesteps).
 
-The resulting model is quite slow to train but does get better results with no ensembling than the alternative Attention class in the public kernels, whether this is simply due to having more units in my LSTMs, I'm not sure, but I think it's worth persisting with.
+The resulting model is quite slow to train but without ensembling it does get better results than the alternative Attention class in the public kernels, whether this is simply due to having more units in my LSTMs, I'm not sure, but I think it's worth persisting with.
 
 ## Install instructions
 0. (optional) create yourself a new, clean Anaconda environment with something like `conda create --name kaggle --clone myenv` or where myenv is the environment you use for deep learning (i.e. tensorflow, keras, GPU enabled if you have one)
