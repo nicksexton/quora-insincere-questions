@@ -14,7 +14,7 @@ The resulting model is quite slow to train but without ensembling it does get be
 0. (optional) create yourself a new, clean Anaconda environment with something like `conda create --name kaggle --clone myenv` or where myenv is the environment you use for deep learning (i.e. tensorflow, keras, GPU enabled if you have one)
 1. clone this repo into an appropriate place using `git clone git@github.com:nicksexton/quora-insincere-questions`
 2. `cd quora-insincere-questions`
-2. (if you don't have it already) install kaggle CLI with `pip install kaggle`
+2. (if you don't have it already) install kaggle CLI with `pip install kaggle`. you'll then need to generate and copy/paste a kaggle access token into a config file, this is documented on the instructions for the [kaggle cli api](https://github.com/Kaggle/kaggle-api).
 3. download the dataset by running `kaggle competitions download quora-insincere-questions-classification`. Note that this will trigger a very large (~8GiB?) download including four word embeddings files so you could maybe tweak this (see [kaggle cli api](https://github.com/Kaggle/kaggle-api).
 4. unzip the embeddings files
 5. the directory structure should such that input directory sits alongside the kernel directories, i.e.: `quora-insincere-questions/input/embeddings/...` and `quora-insincere-questions/attention-sandwich-model/...` etc.
