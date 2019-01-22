@@ -1,6 +1,5 @@
 # Quora Insincere Questions Classification 
-Kaggle competition for NLP classification of Quora questions into into [sincere and insincere
-](https://www.kaggle.com/c/quora-insincere-questions-classification/discussion/77691#456365). 
+LSTM with Attention classifier models for Kaggle Quora Insincere Questions Classification competition dataset. See here for a definition of [sincere and insincere](https://www.kaggle.com/c/quora-insincere-questions-classification/discussion/77691#456365). 
 
 Disclaimer: none of this code will win you the competition, probably ;-) 
 
@@ -19,6 +18,3 @@ The resulting model is quite slow to train but does get better results than the 
 3. download the dataset by running `kaggle competitions download quora-insincere-questions-classification`. Note that this will trigger a very large (~8GiB?) download including four word embeddings files so you could maybe tweak this (see [kaggle cli api](https://github.com/Kaggle/kaggle-api).
 4. unzip the embeddings files
 5. the directory structure should such that input directory sits alongside the kernel directories, i.e.: `quora-insincere-questions/input/embeddings/...` and `quora-insincere-questions/attention-sandwich-model/...` etc.
- 
-
-
