@@ -12,7 +12,7 @@ Disclaimer: none of this code will win you the competition, probably ;-)
 2. (if you don't have it already) install kaggle CLI with `pip install kaggle`
 3. download the dataset by running `kaggle competitions download quora-insincere-questions-classification`. Note that this will trigger a very large (~8GiB?) download including four word embeddings files so you could maybe tweak this (see [kaggle cli api](https://github.com/Kaggle/kaggle-api).
 4. unzip the embeddings files
-5. the directory structure should such that input directory sits alongside the kernel directories, i.e.: quora-insincere-questions/input/embeddings/... and quora-insincere-questions/attention-sandwich-model/... etc.
+5. the directory structure should such that input directory sits alongside the kernel directories, i.e.: `quora-insincere-questions/input/embeddings/...` and `quora-insincere-questions/attention-sandwich-model/...` etc.
  
 
 ## Attention Sandwith Model
