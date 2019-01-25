@@ -11,7 +11,7 @@ I wanted to dig around in the guts of how to implement an attention mechanism fo
 The resulting model is quite slow to train but without ensembling it does get better results than the alternative Attention class in the public kernels, whether this is simply due to having more units in my LSTMs, I'm not sure, but I think it's worth persisting with.
 
 ## Data Augmentation
-An attempt to improve performance by running data augmentation on a fit generator. Problems - the augmentation algorithm is *sloooow*, and needs optimising. Some suggestions that this improves performance a *bit* but currently too costly to run on the kaggle kernel within the time limit. Work in progress.
+An attempt to improve performance by running data augmentation on a fit generator. The generator makes noisy copies of each batch of embedded word vectors. Problems - the augmentation algorithm is *sloooow*, and needs optimising. Some suggestions that this improves performance a *bit* but currently too costly to run on the kaggle kernel within the time limit. Work in progress.
 
 ## Install instructions
 0. (optional) create yourself a new, clean Anaconda environment with something like `conda create --name kaggle --clone myenv` or where myenv is the environment you use for deep learning (i.e. tensorflow, keras, GPU enabled if you have one)
